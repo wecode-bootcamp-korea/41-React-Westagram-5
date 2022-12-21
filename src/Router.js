@@ -16,12 +16,11 @@ import MainGalim from './pages/galim/Main/MainGalim';
 //Sungjae Compo
 import LoginSungjae from './pages/sungjae/Login/LoginSungjae';
 import MainSungjae from './pages/sungjae/Main/MainSungjae';
-import Nav from './components/Nav/Nav';
+
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Nav />} />
         <Route path="/login-jinkyung" element={<LoginJinkyung />} />
         <Route path="/main-jinkyung" element={<MainJinkyung />} />
         <Route path="/login-nahyun" element={<LoginNahyun />} />
