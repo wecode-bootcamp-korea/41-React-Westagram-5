@@ -21,6 +21,13 @@ export default function LoginGalim() {
     navigate('/main-galim');
   };
 
+  const active = idValue.includes('@') && pwValue.length >= 5;
+  let blocked;
+  active ? (blocked = false) : (blocked = true);
+  let color;
+  active
+    ? (color = { backgroundColor: 'blue' })
+    : (color = { backgroundColor: '#b2dffc' });
   return (
     <div>
       <div className="login__wrap">
@@ -45,7 +52,13 @@ export default function LoginGalim() {
               onChange={saveUserPw}
               value={pwValue}
             />
-            <button id="login__btn" onClick={goToMain} type="submit">
+            <button
+              id="login__btn"
+              onClick={goToMain}
+              type="submit"
+              style={color}
+              disabled={blocked}
+            >
               로그인
             </button>
           </section>
