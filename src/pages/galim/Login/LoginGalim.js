@@ -1,9 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.scss';
 
-function LoginGalim() {
-  return <div>Login</div>;
+export default function LoginGalim() {
+  const navigate = useNavigate();
+  const [idValue, setId] = useState('');
+  const [pwValue, setPw] = useState('');
+
+  const saveUserId = event => {
+    setId(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const saveUserPw = event => {
+    setPw(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const goToMain = () => {
+    navigate('/main-galim');
+  };
+
+  return (
+    <div>
+      <div className="login__wrap">
+        <header className="login__logo">
+          <h1>westagram</h1>
+        </header>
+        <form>
+          <section className="login__container">
+            <input
+              className="login__id"
+              id="user__id"
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+              onChange={saveUserId}
+              value={idValue}
+            />
+            <input
+              className="login__pw"
+              id="user__pw"
+              type="password"
+              placeholder="비밀번호"
+              onChange={saveUserPw}
+              value={pwValue}
+            />
+            <button id="login__btn" onClick={goToMain} type="submit">
+              로그인
+            </button>
+          </section>
+        </form>
+        <a href="https://www.instagram.com/accounts/password/reset/">
+          비밀번호를 잊으셨나요?
+        </a>
+      </div>
+    </div>
+  );
 }
-
-export default LoginGalim;
-
-// comments
