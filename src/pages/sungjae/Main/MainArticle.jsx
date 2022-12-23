@@ -1,25 +1,30 @@
+//Import tools
+import { useRef, useState } from 'react'
+
 //Import Img
-// import articleImg from '../../Assets/images/christmas.jpg';
-// import redHeartImg from '../../Assets/images/redheart.png';
-// import chatImg from '../../Assets/images/chat.png';
-// import exportImg from '../../Assets/images/export.png';
-// import saveImg from '../../Assets/images/save.png';
+import articleImg from '../../../assets/images/sungjae/images/christmas.jpg'
+import redHeartImg from '../../../assets/images/sungjae/images/redheart.png'
+import chatImg from '../../../assets/images/sungjae/images/chat.png'
+import exportImg from '../../../assets/images/sungjae/images/export.png'
+import saveImg from '../../../assets/images/sungjae/images/save.png'
+import MainArticleHeader from '../../../components/MainComponents/MainArticleHeader'
+import MainArticleComment from '../../../components/MainComponents/MainArticleComment'
 
-import articleImg from '../../../assets/images/sungjae/images/christmas.jpg';
-import redHeartImg from '../../../assets/images/sungjae/images/redheart.png';
-import chatImg from '../../../assets/images/sungjae/images/chat.png';
-import exportImg from '../../../assets/images/sungjae/images/export.png';
-import saveImg from '../../../assets/images/sungjae/images/save.png';
-
-// import MainArticleHeader from "../../Components/MainComponents/MainArticleHeader";
-// import MainArticleComment from "../../Components/MainComponents/MainArticleComment";
-// import MainArticleUx from "../../Components/MainComponents/MainArticleUx";
-
-import MainArticleHeader from '../../../components/MainComponents/MainArticleHeader';
-import MainArticleComment from '../../../components/MainComponents/MainArticleComment';
-import MainArticleUx from '../../../components/MainComponents/MainArticleUx';
+import MainArticleUx from '../../../components/MainComponents/MainArticleUx'
 
 const MainArticle = () => {
+  const [data, setData] = useState([])
+  const dataId = useRef(0)
+
+  const onCreate = comment => {
+    const newComment = {
+      id: dataId.current,
+      comment,
+    }
+    dataId.current += 1
+    setData([...data, newComment])
+  }
+
   return (
     <div className="main_article">
       <MainArticleHeader />
@@ -41,10 +46,12 @@ const MainArticle = () => {
         <div></div>
       </div>
 
-      <MainArticleComment />
-      <MainArticleUx />
-    </div>
-  );
-};
+      {/* 이 컴포넌트에서 데이터를 뿌려준다. */}
 
-export default MainArticle;
+      <MainArticleComment dataList={data} />
+      <MainArticleUx onCreate={onCreate} />
+    </div>
+  )
+}
+
+export default MainArticle

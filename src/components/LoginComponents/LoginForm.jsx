@@ -1,6 +1,5 @@
-import { useRef, useState } from 'react'
-
 // import faecbookImg from "../../Assets/images/facebook.png";
+import { useRef, useState } from 'react'
 import faecbookImg from '../../assets/images/sungjae/images/facebook.png'
 
 const LoginForm = () => {
@@ -33,15 +32,16 @@ const LoginForm = () => {
     alert('로그인 성공!')
   }
 
-  // focus() 2 조건이 맞춰줬을 떄 버튼 백그라운드 변경
-  const [color, setColor] = useState('')
+  // button 클래스Name을 바꿔서 활성화 시키기
+  const [isActive, setIsActive] = useState(false)
 
-  const changeColorHandler = () => {
-    if (
-      (state.identify.length >= 6 || !state.identify.includes('@')) &&
-      state.password.length >= 6
-    )
-      setColor('#0074cc')
+  const isInputValue =
+    state.identify.length >= 6 &&
+    state.identify.includes('@') &&
+    state.password.length >= 5
+
+  const isInputValueHandler = () => {
+    return isInputValue ? setIsActive(true) : setIsActive(false)
   }
 
   return (
@@ -53,6 +53,7 @@ const LoginForm = () => {
         placeholder="Phone Number, username, or email"
         value={state.identify}
         onChange={changeStateHandler}
+        onKeyUp={isInputValueHandler}
         ref={identifyInput}
       />
       <input
@@ -62,14 +63,14 @@ const LoginForm = () => {
         placeholder="Password"
         value={state.password}
         onChange={changeStateHandler}
+        onKeyUp={isInputValueHandler}
         ref={passwordInput}
       />
       <button
-        style={{ backgroundColor: `${color}` }}
-        className="button"
+        className={isActive ? 'buttonActive' : 'button'}
+        disabled={isInputValue ? false : false}
         onClick={() => {
           submitHandler()
-          changeColorHandler()
         }}
       >
         Log in

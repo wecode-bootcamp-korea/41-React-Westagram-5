@@ -17,7 +17,7 @@ import LoginAdvertisemnet from '../../../components/LoginComponents/LoginAdverti
 const LoginMain = () => {
   const navigate = useNavigate()
   const goToMain = () => {
-    navigate('./main-sungjae')
+    navigate('/main-sungjae')
   }
   return (
     <>

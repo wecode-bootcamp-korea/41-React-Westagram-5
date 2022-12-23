@@ -1,6 +1,14 @@
-import React from "react";
+import React from 'react'
 
-const MainArticleComment = () => {
+const MainArticleComment = props => {
+  console.log(props.dataList)
+
+  const dummy_list = [
+    'JakeSJK ㅎㅇㅎㅇ',
+    'JakeSJK 크리스마스날 뭐하지?',
+    'JakeSJK 나홀로집에?',
+  ]
+
   return (
     <div className="main_article_comments">
       <div className="main_article_comment_1">
@@ -10,13 +18,20 @@ const MainArticleComment = () => {
       </div>
       <div className="main_article_comment_2">
         <ul>
-          <li>JakeSJK ㅎㅇㅎㅇ</li>
-          <li>JakeSJK ㅎㅇㅎㅇ</li>
-          <li>JakeSJK ㅎㅇㅎㅇ</li>
+          {/* Map메서드돌리기 */}
+          {dummy_list.map((it, idx) => (
+            <li>{dummy_list[idx]}</li>
+          ))}
+          {/* Map메서드돌리기 */}
+          {props.dataList.map((it, idx) => (
+            <li key={it.id} {...it}>
+              JAKESJK {it.comment}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainArticleComment;
+export default MainArticleComment
