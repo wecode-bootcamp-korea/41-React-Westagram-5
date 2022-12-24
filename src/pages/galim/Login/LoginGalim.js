@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
@@ -9,12 +9,10 @@ export default function LoginGalim() {
 
   const saveUserId = event => {
     setId(event.target.value);
-    console.log(event.target.value);
   };
 
   const saveUserPw = event => {
     setPw(event.target.value);
-    console.log(event.target.value);
   };
 
   const goToMain = () => {
@@ -26,16 +24,16 @@ export default function LoginGalim() {
   active ? (blocked = false) : (blocked = true);
   let color;
   active
-    ? (color = { backgroundColor: 'blue' })
+    ? (color = { backgroundColor: '#0179f2' })
     : (color = { backgroundColor: '#b2dffc' });
   return (
     <div>
-      <div className="login__wrap">
-        <header className="login__logo">
+      <div className="login-wrap">
+        <header className="login-logo">
           <h1>westagram</h1>
         </header>
         <form>
-          <section className="login__container">
+          <section className="login-container">
             <input
               className="login__id"
               id="user__id"
