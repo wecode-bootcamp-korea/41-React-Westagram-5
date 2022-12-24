@@ -20,12 +20,6 @@ export default function LoginGalim() {
   };
 
   const isActive = idValue.includes('@') && pwValue.length >= 5;
-  let blocked;
-  isActive ? (blocked = false) : (blocked = true);
-  let color;
-  isActive
-    ? (color = { backgroundColor: '#0179f2' })
-    : (color = { backgroundColor: '#b2dffc' });
 
   return (
     <div>
@@ -55,8 +49,8 @@ export default function LoginGalim() {
               id="login-btn"
               onClick={handleToMain}
               type="submit"
-              style={color}
-              disabled={blocked}
+              style={{ backgroundColor: `${isActive ? '#0179f2' : '#b2dffc'}` }}
+              disabled={!isActive}
             >
               로그인
             </button>
