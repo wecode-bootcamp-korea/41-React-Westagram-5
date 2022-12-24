@@ -14,6 +14,8 @@ const MainArticleUx = props => {
     }
     if (comment.length >= 1) {
       props.onCreate(comment)
+      alert('저장성공')
+      setComment('')
     }
   }
 

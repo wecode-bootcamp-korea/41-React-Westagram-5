@@ -30,6 +30,10 @@ const LoginForm = () => {
     }
 
     alert('로그인 성공!')
+    setState({
+      identify: '',
+      password: '',
+    })
   }
 
   // button 클래스Name을 바꿔서 활성화 시키기
