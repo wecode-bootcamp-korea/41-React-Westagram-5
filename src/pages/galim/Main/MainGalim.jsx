@@ -1,85 +1,90 @@
 import React from 'react';
 import './Main.scss';
+import instagramLogo from '../../../assets/images/galim/instagram-logo.png';
+import explore from '../../../assets/images/galim/explore.png';
+import heart from '../../../assets/images/galim/heart.png';
+import chat from '../../../assets/images/galim/chat.png';
+import dally from '../../../assets/images/galim/dally.jpeg';
+import profile from '../../../assets/images/galim/profile.png';
+import postImg from '../../../assets/images/galim/post-img.jpg';
+import profileImg from '../../../assets/images/galim/profile-img.jpg';
+import comment from '../../../assets/images/galim/comment.png';
+import redHeart from '../../../assets/images/galim/redheart.png';
+import saveInstagram from '../../../assets/images/galim/save-instagram.png';
+import share from '../../../assets/images/galim/share.png';
+import wecodeLogo from '../../../assets/images/galim/wecode-logo.jpeg';
 
 const MainGalim = () => {
   return (
-    <div className="main__wrap">
+    <div className="main-wrap">
       <nav>
-        <div className="main__logo">
-          <img src="./images/instagram-logo.png" alt="위스타그램 로고" />
+        <div className="main-logo">
+          <img src={instagramLogo} alt="위스타그램 로고" />
           <span>|</span>
           <h1>westagram</h1>
         </div>
         <form className="search">
           <input type="text" placeholder="검색" />
         </form>
-        <div className="main__userdata">
+        <div className="main-userdata">
           <img
-            src="./images/explore.png"
+            src={explore}
             alt="추천 게시글"
-            className="main__userdata--recommendpost"
+            className="main-userdata-recommendpost"
           />
-          <img
-            src="./images/heart.png"
-            alt="좋아요"
-            className="main__userdata--like"
-          />
-          <img
-            src="./images/profile.png"
-            alt="내 프로필"
-            className="main__userdata--info"
-          />
+          <img src={heart} alt="좋아요" className="main-userdata-like" />
+          <img src={profile} alt="내 프로필" className="main-userdata-info" />
         </div>
       </nav>
 
-      <div className="main__content">
+      <div className="main-content">
         <section>
-          <div className="main__userpost--wrap">
-            <div className="main__userpost--idwrap">
-              <div className="main__userpost--id">
-                <img src="./images/IMG_2913.jpg" alt="위스타그램 프로필사진" />
+          <div className="main-userpost-wrap">
+            <div className="main-userpost-idwrap">
+              <div className="main-userpost-id">
+                <img src={wecodeLogo} alt="위스타그램 프로필사진" />
                 <p>instagalim</p>
               </div>
-              <div className="main__user--option">
+              <div className="main-user-option">
                 <i className="fa-solid fa-ellipsis fa-1x" />
               </div>
             </div>
 
             <article>
               <img
-                src="./images/post-img.jpg"
+                src={postImg}
                 alt="위스타그램 게시글"
-                className="main__user--posting"
+                className="main-user-posting"
               />
-              <div className="main__user--commentwrap">
-                <div className="main__userpost--logo">
-                  <div className="post__icon">
-                    <img src="./images/redheart.png" alt="좋아요" />
-                    <img src="./images/chat.png" alt="댓글" />
-                    <img src="./images/share.png" alt="" />
+              <div className="main-user-commentwrap">
+                <div className="main-userpost-logo">
+                  <div className="post-icon">
+                    <img src={redHeart} alt="좋아요" />
+                    <img src={chat} alt="댓글" />
+                    <img src={share} alt="공유하기" />
                   </div>
-                  <div className="bookmark__wrap">
-                    <img src="./images/save-instagram.png" alt="북마크" />
+                  <div className="bookmark-wrap">
+                    <img src={saveInstagram} alt="북마크" />
                   </div>
                 </div>
-                <p className="main__user--content">
-                  <span className="user__id--color">wecode_bootcamp</span>님 외{' '}
-                  <span className="user__id--color">10명</span>이 좋아합니다
+                <p className="main-user-content">
+                  <span className="user-id-color">wecode_bootcamp</span>님 외{' '}
+                  <span className="user-id-color">10명</span>이 좋아합니다
                 </p>
-                <div className="main__content--wrap">
-                  <span className="user__id--color">instagalim</span>
-                  <span className="post--content">
+                <div className="main-content-wrap">
+                  <span className="user-id-color">instagalim</span>
+                  <span className="post-content">
                     위코드에서 먹은 돼지불백! 너무 맛있당...
-                    <span className="color__grey">더 보기</span>
+                    <span className="color-grey">더 보기</span>
                   </span>
-                  <p className="color__grey">42분 전</p>
+                  <p className="color-grey">42분 전</p>
                 </div>
               </div>
-              <div className="comment__list">
-                <div className="main__userpost--comment">
+              <div className="comment-list">
+                <div className="main-userpost-comment">
                   <input id="comment" type="text" placeholder="댓글 달기..." />
                   <span>
-                    <button id="comment__btn" type="submit">
+                    <button id="comment-btn" type="submit">
                       게시
                     </button>
                   </span>
@@ -90,84 +95,84 @@ const MainGalim = () => {
         </section>
 
         <aside>
-          <div className="main__aside--user">
-            <img src="./images/wecode-logo.jpeg" alt="위코드 인스타그램 로고" />
-            <div className="main__aside--userid">
+          <div className="main-aside-user">
+            <img src={wecodeLogo} alt="위코드 인스타그램 로고" />
+            <div className="main-aside-userid">
               <h1>wecode_bootcamp</h1>
               <p>WeCode | 위코드</p>
             </div>
           </div>
-          <div className="main__aside--story">
-            <div className="main__aside--storytitle">
-              <p className="color__grey">스토리</p>
+          <div className="main-aside-story">
+            <div className="main-aside-storytitle">
+              <p className="color-grey">스토리</p>
               <p>모두 보기</p>
             </div>
             <ul>
-              <li className="main__aside--storyitem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--storyid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">16분 전</p>
+              <li className="main-aside-storyitem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-storyid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">16분 전</p>
                 </div>
               </li>
-              <li className="main__aside--storyitem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--storyid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">32분 전</p>
+              <li className="main-aside-storyitem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-storyid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">32분 전</p>
                 </div>
               </li>
-              <li className="main__aside--storyitem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--storyid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">51분 전</p>
+              <li className="main-aside-storyitem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-storyid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">51분 전</p>
                 </div>
               </li>
-              <li className="main__aside--storyitem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--storyid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">1시간 전</p>
+              <li className="main-aside-storyitem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-storyid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">1시간 전</p>
                 </div>
               </li>
             </ul>
           </div>
 
-          <div className="main__aside--recommend">
-            <div className="main__aside--recommendtitle">
-              <p className="color__grey">회원님을 위한 추천</p>
+          <div className="main-aside-recommend">
+            <div className="main-aside-recommendtitle">
+              <p className="color-grey">회원님을 위한 추천</p>
               <p>모두 보기</p>
             </div>
             <ul>
-              <li className="main__aside--recommenditem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--recommendid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">wecode_bootcamp님 외 ...</p>
+              <li className="main-aside-recommenditem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-recommendid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">wecode_bootcamp님 외 ...</p>
                 </div>
-                <p className="main__aside--recommenditemfollow">팔로우</p>
+                <p className="main-aside-recommenditemfollow">팔로우</p>
               </li>
-              <li className="main__aside--recommenditem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--recommendid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">wecode_bootcamp님 외 ...</p>
+              <li className="main-aside-recommenditem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-recommendid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">wecode_bootcamp님 외 ...</p>
                 </div>
-                <p className="main__aside--recommenditemfollow">팔로우</p>
+                <p className="main-aside-recommenditemfollow">팔로우</p>
               </li>
-              <li className="main__aside--recommenditem">
-                <img src="./images/dally.jpeg" alt="스토리 프로필사진" />
-                <div className="main__aside--recommendid">
-                  <p className="user__id">im_dally</p>
-                  <p className="color__grey">wecode_bootcamp님 외 ...</p>
+              <li className="main-aside-recommenditem">
+                <img src={dally} alt="스토리 프로필사진" />
+                <div className="main-aside-recommendid">
+                  <p className="user-id">im_dally</p>
+                  <p className="color-grey">wecode_bootcamp님 외 ...</p>
                 </div>
-                <p className="main__aside--recommenditemfollow">팔로우</p>
+                <p className="main-aside-recommenditemfollow">팔로우</p>
               </li>
             </ul>
           </div>
 
-          <div className="main__aside--etc">
+          <div className="main-aside-etc">
             <p>
               Instagram 정보﹒지원﹒홍보 센터﹒API﹒
               <br />
