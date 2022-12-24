@@ -8,7 +8,6 @@ import dally from '../../../assets/images/galim/dally.jpeg';
 import profile from '../../../assets/images/galim/profile.png';
 import postImg from '../../../assets/images/galim/post-img.jpg';
 import profileImg from '../../../assets/images/galim/profile-img.jpg';
-import comment from '../../../assets/images/galim/comment.png';
 import redHeart from '../../../assets/images/galim/redheart.png';
 import saveInstagram from '../../../assets/images/galim/save-instagram.png';
 import share from '../../../assets/images/galim/share.png';
@@ -42,7 +41,7 @@ const MainGalim = () => {
           <div className="main-userpost-wrap">
             <div className="main-userpost-idwrap">
               <div className="main-userpost-id">
-                <img src={wecodeLogo} alt="위스타그램 프로필사진" />
+                <img src={profileImg} alt="위스타그램 프로필사진" />
                 <p>instagalim</p>
               </div>
               <div className="main-user-option">
