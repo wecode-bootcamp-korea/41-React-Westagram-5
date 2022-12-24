@@ -4,28 +4,29 @@ import './Login.scss';
 
 export default function LoginGalim() {
   const navigate = useNavigate();
-  const [idValue, setId] = useState('');
-  const [pwValue, setPw] = useState('');
+  const [idValue, setIdValue] = useState('');
+  const [pwValue, setPwValue] = useState('');
 
-  const saveUserId = event => {
-    setId(event.target.value);
+  const handleSaveUserId = event => {
+    setIdValue(event.target.value);
   };
 
-  const saveUserPw = event => {
-    setPw(event.target.value);
+  const handleSaveUserPw = event => {
+    setPwValue(event.target.value);
   };
 
-  const goToMain = () => {
+  const handleToMain = () => {
     navigate('/main-galim');
   };
 
-  const active = idValue.includes('@') && pwValue.length >= 5;
+  const isActive = idValue.includes('@') && pwValue.length >= 5;
   let blocked;
-  active ? (blocked = false) : (blocked = true);
+  isActive ? (blocked = false) : (blocked = true);
   let color;
-  active
+  isActive
     ? (color = { backgroundColor: '#0179f2' })
     : (color = { backgroundColor: '#b2dffc' });
+
   return (
     <div>
       <div className="login-wrap">
@@ -39,7 +40,7 @@ export default function LoginGalim() {
               id="user-id"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={saveUserId}
+              onChange={handleSaveUserId}
               value={idValue}
             />
             <input
@@ -47,12 +48,12 @@ export default function LoginGalim() {
               id="user-pw"
               type="password"
               placeholder="비밀번호"
-              onChange={saveUserPw}
+              onChange={handleSaveUserPw}
               value={pwValue}
             />
             <button
               id="login-btn"
-              onClick={goToMain}
+              onClick={handleToMain}
               type="submit"
               style={color}
               disabled={blocked}
