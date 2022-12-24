@@ -35,23 +35,23 @@ export default function LoginGalim() {
         <form>
           <section className="login-container">
             <input
-              className="login__id"
-              id="user__id"
+              className="login-id"
+              id="user-id"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               onChange={saveUserId}
               value={idValue}
             />
             <input
-              className="login__pw"
-              id="user__pw"
+              className="login-pw"
+              id="user-pw"
               type="password"
               placeholder="비밀번호"
               onChange={saveUserPw}
               value={pwValue}
             />
             <button
-              id="login__btn"
+              id="login-btn"
               onClick={goToMain}
               type="submit"
               style={color}
