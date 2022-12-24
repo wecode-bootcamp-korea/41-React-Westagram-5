@@ -177,6 +177,20 @@
         margin-bottom: 5px;
         font-size: 14px;
       }
+
+      .main_article_comments_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+          border: none;
+          background-color: transparent;
+          color: rgb(74, 108, 229);
+          font-size: 6px;
+        }
+      }
     }
     .main_article_ux {
       display: flex;

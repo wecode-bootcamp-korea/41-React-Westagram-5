@@ -25,6 +25,11 @@ const MainArticle = () => {
     setData([...data, newComment])
   }
 
+  const onDelete = targetId => {
+    const newCommentList = data.filter(it => it.id !== targetId)
+    setData(newCommentList)
+  }
+
   return (
     <div className="main_article">
       <MainArticleHeader />
@@ -48,7 +53,7 @@ const MainArticle = () => {
 
       {/* 이 컴포넌트에서 데이터를 뿌려준다. */}
 
-      <MainArticleComment dataList={data} />
+      <MainArticleComment dataList={data} onDelete={onDelete} />
       <MainArticleUx onCreate={onCreate} />
     </div>
   )

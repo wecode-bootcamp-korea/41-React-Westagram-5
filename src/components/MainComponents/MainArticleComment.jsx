@@ -2,6 +2,8 @@ import React from 'react'
 
 const MainArticleComment = props => {
   console.log(props.dataList)
+  console.log(props.onDelete)
+  console.log(props.id)
 
   const dummy_list = [
     'JakeSJK ㅎㅇㅎㅇ',
@@ -24,9 +26,20 @@ const MainArticleComment = props => {
           ))}
           {/* Map메서드돌리기 */}
           {props.dataList.map((it, idx) => (
-            <li key={it.id} {...it}>
-              JAKESJK {it.comment}
-            </li>
+            <div className="main_article_comments_wrap">
+              <li key={it.id} {...it}>
+                JAKESJK {it.comment}
+              </li>
+              <button
+                onClick={() => {
+                  if (window.confirm(`${it.id}번째 댓글을 삭제하시겠습니까?`)) {
+                    props.onDelete(it.id)
+                  }
+                }}
+              >
+                삭제하기
+              </button>
+            </div>
           ))}
         </ul>
       </div>
