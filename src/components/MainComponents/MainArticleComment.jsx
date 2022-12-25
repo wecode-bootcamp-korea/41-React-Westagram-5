@@ -1,10 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const MainArticleComment = props => {
-  console.log(props.dataList)
-  console.log(props.onDelete)
-  console.log(props.id)
-
   const dummy_list = [
     'JakeSJK ㅎㅇㅎㅇ',
     'JakeSJK 크리스마스날 뭐하지?',

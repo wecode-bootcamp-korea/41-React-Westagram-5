@@ -16,7 +16,15 @@ const MainArticleUx = props => {
       props.onCreate(comment)
       alert('저장성공')
       setComment('')
+      setIsActive(false)
     }
+  }
+  // const active = comment.length >= 1;
+  const [isActive, setIsActive] = useState(false)
+  const isButtonValue = comment.length > 5
+  console.log(comment.length)
+  const isButtonValueHandler = () => {
+    return isButtonValue ? setIsActive(true) : setIsActive(false)
   }
 
   return (
@@ -26,10 +34,16 @@ const MainArticleUx = props => {
           name="comment"
           value={comment}
           onChange={onCommentHandler}
+          onKeyUp={isButtonValueHandler}
           placeholder="댓글달기"
           ref={commentInput}
         />
-        <button onClick={changeCommentHandler}>게시</button>
+        <button
+          className={isActive ? 'buttonActive' : ''}
+          onClick={changeCommentHandler}
+        >
+          게시
+        </button>
       </div>
     </div>
   )

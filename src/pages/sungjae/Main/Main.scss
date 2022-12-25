@@ -169,6 +169,12 @@
       padding: 15px;
       background-color: #ffff;
 
+      button {
+        border: none;
+        background-color: transparent;
+        color: rgb(90, 121, 234);
+      }
+
       .main_article_comment_1 {
         margin-bottom: 30px;
       }
@@ -183,13 +189,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
-        button {
-          border: none;
-          background-color: transparent;
-          color: rgb(74, 108, 229);
-          font-size: 6px;
-        }
       }
     }
     .main_article_ux {
@@ -199,6 +198,7 @@
       justify-content: space-between;
 
       background-color: #ffff;
+
       input {
         width: 450px;
         height: 34px;
@@ -207,12 +207,28 @@
 
         text-align: center;
       }
+
       button {
         width: 90px;
         height: 40px;
         border: none;
         background-color: transparent;
-        color: rgb(90, 121, 234);
+        color: rgb(161, 176, 233);
+        font-size: 8px;
+      }
+
+      // .button {
+      //   border: none;
+      //   background-color: transparent;
+      //   color: rgb(74, 108, 229);
+      //   font-size: 6px;
+      // }
+
+      .buttonActive {
+        border: none;
+        background-color: transparent;
+        color: #0717ff;
+        font-size: 8px;
       }
     }
     .main_side {
