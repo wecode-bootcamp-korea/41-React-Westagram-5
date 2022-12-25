@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 import instagramLogo from '../../../assets/images/galim/instagram-logo.png';
 import explore from '../../../assets/images/galim/explore.png';
@@ -14,6 +14,33 @@ import share from '../../../assets/images/galim/share.png';
 import wecodeLogo from '../../../assets/images/galim/wecode-logo.jpeg';
 
 const MainGalim = () => {
+  const [commentValue, setCommentValue] = useState('');
+
+  // 댓글이 저장될 공간
+  const [commentList, setCommentList] = useState([]);
+  // 원래는 단순한 array가 아닌 object로 array를 만들어야 함.
+  // [{id:1,value:'',nickname:''}, {id:2,value:'',nickname:''}, {id:3,value:'',nickname:''}]
+  // 입력한 값이 잘 출력되는지 확인
+  const handleAddComment = () => {
+    let arr = commentList;
+    if (commentValue === '') {
+      return alert('댓글을 입력해주세요.');
+    }
+    arr.push(commentValue);
+    setCommentList(arr);
+    setCommentValue('');
+  };
+
+  const handleKeyDown = e => {
+    if (e.keyCode === 13) {
+      handleAddComment();
+    }
+  };
+
+  const handleUserComment = e => {
+    setCommentValue(e.target.value);
+  };
+
   return (
     <div className="main-wrap">
       <nav>
@@ -76,14 +103,29 @@ const MainGalim = () => {
                     위코드에서 먹은 돼지불백! 너무 맛있당...
                     <span className="color-grey">더 보기</span>
                   </span>
+                  <div className="comment-list">
+                    {commentList.map((comment, idx) => (
+                      <p key={idx} className="comment-content">
+                        <span className="comment-user">im_dally</span>
+                        <span className="comment-value">{comment}</span>
+                      </p>
+                    ))}
+                  </div>
                   <p className="color-grey">42분 전</p>
                 </div>
               </div>
               <div className="comment-list">
                 <div className="main-userpost-comment">
-                  <input id="comment" type="text" placeholder="댓글 달기..." />
+                  <input
+                    id="comment"
+                    type="text"
+                    placeholder="댓글 달기..."
+                    onChange={handleUserComment}
+                    onKeyDown={handleKeyDown}
+                    value={commentValue}
+                  />
                   <span>
-                    <button id="comment-btn" type="submit">
+                    <button id="comment-btn" onClick={handleAddComment}>
                       게시
                     </button>
                   </span>

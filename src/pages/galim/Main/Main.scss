@@ -34,6 +34,12 @@ body {
   font-size: 16px;
 }
 
+.comment-user {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
 /* main style 속성 정의 */
 .main-wrap {
   flex-direction: column;
