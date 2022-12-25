@@ -12,6 +12,7 @@ import redHeart from '../../../assets/images/galim/redheart.png';
 import saveInstagram from '../../../assets/images/galim/save-instagram.png';
 import share from '../../../assets/images/galim/share.png';
 import wecodeLogo from '../../../assets/images/galim/wecode-logo.jpeg';
+import Comment from '../../../components/galim/Comment';
 
 const MainGalim = () => {
   const [commentValue, setCommentValue] = useState('');
@@ -19,6 +20,7 @@ const MainGalim = () => {
   // 댓글이 저장될 공간
   const [commentList, setCommentList] = useState([]);
   // 원래는 단순한 array가 아닌 object로 array를 만들어야 함.
+  // 현재 index값으로 key 값을 설정하였으나, 나중에는 id로 key값을 설정해야함.
   // [{id:1,value:'',nickname:''}, {id:2,value:'',nickname:''}, {id:3,value:'',nickname:''}]
   // 입력한 값이 잘 출력되는지 확인
   const handleAddComment = () => {
@@ -105,10 +107,7 @@ const MainGalim = () => {
                   </span>
                   <div className="comment-list">
                     {commentList.map((comment, idx) => (
-                      <p key={idx} className="comment-content">
-                        <span className="comment-user">im_dally</span>
-                        <span className="comment-value">{comment}</span>
-                      </p>
+                      <Comment key={idx} comment={comment} />
                     ))}
                   </div>
                   <p className="color-grey">42분 전</p>
