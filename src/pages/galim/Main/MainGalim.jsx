@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Main.scss';
-import instagramLogo from '../../../assets/images/galim/instagram-logo.png';
-import explore from '../../../assets/images/galim/explore.png';
-import heart from '../../../assets/images/galim/heart.png';
 import chat from '../../../assets/images/galim/chat.png';
 import dally from '../../../assets/images/galim/dally.jpeg';
-import profile from '../../../assets/images/galim/profile.png';
 import postImg from '../../../assets/images/galim/post-img.jpg';
 import profileImg from '../../../assets/images/galim/profile-img.jpg';
 import redHeart from '../../../assets/images/galim/redheart.png';
@@ -13,6 +9,7 @@ import saveInstagram from '../../../assets/images/galim/save-instagram.png';
 import share from '../../../assets/images/galim/share.png';
 import wecodeLogo from '../../../assets/images/galim/wecode-logo.jpeg';
 import Comment from '../../../components/galim/Comment';
+import Nav from '../../../components/Nav/Nav';
 
 const MainGalim = () => {
   const [commentValue, setCommentValue] = useState('');
@@ -45,25 +42,7 @@ const MainGalim = () => {
 
   return (
     <div className="main-wrap">
-      <nav>
-        <div className="main-logo">
-          <img src={instagramLogo} alt="위스타그램 로고" />
-          <span>|</span>
-          <h1>westagram</h1>
-        </div>
-        <form className="search">
-          <input type="text" placeholder="검색" />
-        </form>
-        <div className="main-userdata">
-          <img
-            src={explore}
-            alt="추천 게시글"
-            className="main-userdata-recommendpost"
-          />
-          <img src={heart} alt="좋아요" className="main-userdata-like" />
-          <img src={profile} alt="내 프로필" className="main-userdata-info" />
-        </div>
-      </nav>
+      <Nav />
 
       <div className="main-content">
         <section>
