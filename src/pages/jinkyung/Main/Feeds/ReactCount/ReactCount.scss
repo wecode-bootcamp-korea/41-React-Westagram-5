@@ -1,0 +1,24 @@
+@import '../../../../../styles/variables';
+
+#react_user_wrap {
+  display: flex;
+  height: 40px;
+  padding: 12px;
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .react_user_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-image: url(../../../../../assets/images/jinkyung/Main/comment_user_img.JPG);
+    background-size: cover;
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .react_user_count {
+    padding: 5px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

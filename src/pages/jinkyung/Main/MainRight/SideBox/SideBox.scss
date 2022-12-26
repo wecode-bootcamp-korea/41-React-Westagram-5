@@ -1,0 +1,26 @@
+@import '../../../../../styles/variables';
+
+/* -----side box----- */
+#side_box {
+  aspect-ratio: 1/0.8;
+  @include border;
+  @include background-color-white;
+  margin-bottom: 10px;
+  overflow: scroll;
+
+  &.side_small {
+    aspect-ratio: 1/0.6;
+  }
+
+  #side_info_wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding: 10px;
+    font-size: 15px;
+
+    .title {
+      color: var(--font-color-gray);
+    }
+  }
+}

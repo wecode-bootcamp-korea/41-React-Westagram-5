@@ -1,0 +1,35 @@
+@import '../../../../../styles/variables';
+
+#comment_wrap {
+  display: flex;
+  font-size: 15px;
+
+  .nickname {
+    margin-right: 10px;
+  }
+
+  .remove_btn {
+    position: absolute;
+    right: 27px;
+    color: rgb(161, 161, 161);
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .empty_heart,
+  .full_heart {
+    position: absolute;
+    right: 55px;
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+  }
+
+  .full_heart {
+    background-image: url(../../../../../assets/images/jinkyung/Main/heart.png);
+  }
+
+  .empty_heart {
+    background-image: url(../../../../../assets/images/jinkyung/Main/empty_heart.png);
+  }
+}
