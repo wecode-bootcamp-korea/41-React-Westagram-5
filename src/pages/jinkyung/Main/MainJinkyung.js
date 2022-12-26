@@ -1,9 +1,8 @@
 import React from 'react';
-import '../Main/Main.scss';
-import '../../../styles/common.scss';
-
 import Feeds from './Feeds/Feeds';
 import MainRight from './MainRight/MainRight';
+import '../Main/Main.scss';
+import '../../../styles/common.scss';
 
 const Main = () => {
   return (

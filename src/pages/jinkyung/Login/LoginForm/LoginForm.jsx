@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   let [email, setEmail] = useState('');
   let [password, setPassword] = useState('');
+
   const navigate = useNavigate();
 
   //이메일 값 가져오기
@@ -28,6 +29,7 @@ function LoginForm() {
       ? navigate('/main-jinkyung')
       : alert('아이디 또는 비밀번호를 확인하세요');
   };
+
   return (
     <section>
       <form>

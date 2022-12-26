@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import '../Feeds/Feeds.scss';
-import Comment from './Comment/Comment';
-
 import ReactCount from './ReactCount/ReactCount';
+import Comment from './Comment/Comment';
+import '../Feeds/Feeds.scss';
 
 function Feeds() {
   let [count, setCount] = useState(10);

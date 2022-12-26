@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../../Feeds/Comment/Comment.scss';
 import Item from './Item';
+import '../../Feeds/Comment/Comment.scss';
 
 function Comment() {
   let [comment, setComment] = useState([]); //map함수 사용하기위해 우선 빈 배열을 만든다.

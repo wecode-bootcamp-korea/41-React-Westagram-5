@@ -1,9 +1,9 @@
 import React from 'react';
+import LoginForm from '../Login/LoginForm/LoginForm';
 import './Login.scss';
 import '../Login/LoginForm/LoginForm.scss';
 import '../../../styles/common.scss';
 import '../../../styles/variables.scss';
-import LoginForm from '../Login/LoginForm/LoginForm';
 
 const Login = () => {
   return (
