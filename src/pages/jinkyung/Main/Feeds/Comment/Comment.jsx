@@ -6,10 +6,8 @@ function Comment() {
   let [comment, setComment] = useState([]); //map함수 사용하기위해 우선 빈 배열을 만든다.
   let [inputValue, setInputValue] = useState(''); //input의 값을 받아오기위한 state를 만든다.
   // let [active, setActive] = useState("blue_btn blur");
-  let [heart, setHeart] = useState(false);
 
   const button1 = inputValue.length > 1 ? false : true;
-  const heartBtn = heart ? 'full_heart' : 'empty_heart';
 
   //input값 state에 넣기
   const text = e => {
@@ -40,14 +38,7 @@ function Comment() {
         return (
           // -----중요!!!!  map함수의 비효율성을 줄이기 위해 입력해줌-----
           <ul key={idx} id="comment_wrap">
-            <Item
-              comment={comment}
-              setComment={setComment}
-              heart={heart}
-              setHeart={setHeart}
-              heartBtn={heartBtn}
-              a={a}
-            />
+            <Item comment={comment} setComment={setComment} a={a} />
           </ul>
         );
       })}

@@ -1,4 +1,5 @@
 import React, { children } from 'react';
+import AsideList from './AsideList/AsideList';
 import UserInfo from '../MainRight/UserInfo/UserInfo';
 import UserInfoSub from '../MainRight/UserInfo/UserInfoSub';
 import SideBox from '../MainRight/SideBox/SideBox';
@@ -16,6 +17,7 @@ function MainRight() {
         {children}
         <UserInfoSub />
       </SideBox>
+      <AsideList />
     </div>
   );
 }
