@@ -1,0 +1,32 @@
+.article-comment {
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: left;
+  position: relative;
+  .nickname-bold {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  i {
+    cursor: pointer;
+  }
+  .fa-trash {
+    position: absolute;
+    right: 10px;
+    opacity: 50%;
+  }
+  .fa-fish {
+    position: absolute;
+    right: 50px;
+    opacity: 50%;
+  }
+  .fa-pencil {
+    position: absolute;
+    right: 30px;
+    opacity: 50%;
+  }
+  .heart {
+    color: red;
+    opacity: 100%;
+  }
+}
