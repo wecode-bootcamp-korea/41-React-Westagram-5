@@ -19,6 +19,13 @@ const MainArticleUx = props => {
       setIsActive(false)
     }
   }
+
+  const onClickHandler = e => {
+    if (e.key === 'Enter') {
+      changeCommentHandler()
+    }
+  }
+
   // const active = comment.length >= 1;
   const [isActive, setIsActive] = useState(false)
   const isButtonValue = comment.length > 5
@@ -35,6 +42,7 @@ const MainArticleUx = props => {
           value={comment}
           onChange={onCommentHandler}
           onKeyUp={isButtonValueHandler}
+          onKeyPress={onClickHandler}
           placeholder="댓글달기"
           ref={commentInput}
         />
