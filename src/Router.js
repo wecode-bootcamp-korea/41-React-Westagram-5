@@ -6,8 +6,8 @@ import LoginJinkyung from './pages/jinkyung/Login/LoginJinkyung';
 import MainJinkyung from './pages/jinkyung/Main/MainJinkyung';
 
 //Nahyun Compo
-import LoginNahyun from './pages/nahyun/Login/LoginNahyun';
-import MainNahyun from './pages/nahyun/Main/MainNahyun';
+import LoginNahyun from './pages/nahyun/Login/Login';
+import MainNahyun from './pages/nahyun/Main/Main';
 
 //Galim Compo
 import LoginGalim from './pages/galim/Login/LoginGalim';
