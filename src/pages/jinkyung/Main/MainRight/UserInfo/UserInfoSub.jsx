@@ -5,13 +5,13 @@ function UserInfoSub() {
   const USER_INFO_LIST = [
     {
       id: 1,
-      img: 'images/jinkyung/user_img_1.jpeg',
+      img: 'images/jinkyung/comment_user_img_2.jpeg',
       name: 'jaerong_e',
       sub_name: '말티즈 | 5살',
     },
     {
       id: 2,
-      img: 'images/jinkyung/user_img_2.jpeg',
+      img: 'images/jinkyung/comment_user_img_1.jpeg',
       name: 'hu_zzi',
       sub_name: '비숑 | 2살',
     },

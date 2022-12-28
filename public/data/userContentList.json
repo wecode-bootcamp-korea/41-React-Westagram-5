@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "ijinkyung",
+    "userImg": "/images/jinkyung/my_user_img.JPG",
+    "contentImg": "/images/jinkyung/content_img_1.jpg",
+    "commentUserImg": "/images/jinkyung/comment_user_img_1.jpeg",
+    "commentName": "hu_zzi",
+    "likeCount": 50
+  },
+  {
+    "id": 2,
+    "userName": "miru_miru_zzang",
+    "userImg": "/images/jinkyung/user_img_cat.JPG",
+    "contentImg": "/images/jinkyung/content_img_2.jpg",
+    "commentUserImg": "/images/jinkyung/comment_user_img_2.jpeg",
+    "commentName": "jaerong_e",
+    "likeCount": 70
+  }
+]

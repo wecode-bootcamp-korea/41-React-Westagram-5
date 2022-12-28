@@ -1,12 +1,12 @@
 import React from 'react';
 import '../ReactCount/ReactCount.scss';
 
-function ReactCount(props) {
+function ReactCount({ info, count }) {
   return (
     <div id="react_user_wrap">
-      <div className="react_user_img" />
+      <img className="react_user_img" src={info.commentUserImg} />
       <div className="react_user_count">
-        love_cat님 외 {props.count}명이 좋아합니다
+        {info.commentName}님 외 {count}명이 좋아합니다
       </div>
     </div>
   );
