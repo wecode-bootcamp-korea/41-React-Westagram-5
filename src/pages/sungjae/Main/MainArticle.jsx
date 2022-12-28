@@ -11,8 +11,8 @@ import saveImg from '../../../assets/images/sungjae/images/save.png'
 import MainArticleHeader from '../../../components/MainComponents/MainArticleHeader'
 import MainArticleComment from '../../../components/MainComponents/MainArticleComment'
 
-const MainArticle = () => {
-  const [data, setData] = useState([])
+const MainArticle = ({ article }) => {
+  const [data, setData] = useState(article.comment)
   const dataId = useRef(0)
 
   const onCreate = comment => {
@@ -30,15 +30,15 @@ const MainArticle = () => {
   }
 
   return (
-    <div className="main_article">
+    <div className="main-article">
       <MainArticleHeader />
 
       <div
-        className="main_article_image"
+        className="main-article-image"
         style={{ backgroundImage: `url(${articleImg})` }}
       ></div>
-      <div className="main_article_icon_wrap">
-        <div className="main_article_icon_wrap_left">
+      <div className="main-article-icon-wrap">
+        <div className="main-article-icon-wrap-left">
           <img src={redHeartImg} alt="logo" />
           <img src={chatImg} alt="logo" />
           <img src={exportImg} alt="logo" />
@@ -49,9 +49,11 @@ const MainArticle = () => {
         <div></div>
       </div>
 
-      {/* 이 컴포넌트에서 데이터를 뿌려준다. */}
-
-      <MainArticleComment dataList={data} onDelete={onDelete} />
+      <MainArticleComment
+        dataList={data}
+        onDelete={onDelete}
+        article={article}
+      />
       <MainArticleUx onCreate={onCreate} />
     </div>
   )

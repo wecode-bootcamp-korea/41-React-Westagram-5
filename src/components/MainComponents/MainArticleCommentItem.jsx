@@ -1,10 +1,12 @@
 const MainArticleCommentItem = props => {
+  console.log(props)
+  console.log(props)
   return (
-    <div className="main_article_comments_wrap">
-      <li key={props.id}>JAKESJK {props.comment}</li>
+    <div className="main-article-comments-wrap">
+      <li key={props.id}> JAKESJK {props.comment} </li>
+
       <button
         onClick={() => {
-          console.log('???')
           if (window.confirm(`${props.id}번째 댓글을 삭제하시겠습니까?`)) {
             props.onDelete(props.id)
           }

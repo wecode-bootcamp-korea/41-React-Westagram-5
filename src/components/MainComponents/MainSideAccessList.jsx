@@ -5,9 +5,9 @@ import friend4 from '../../assets/images/sungjae/images/friend4.png'
 
 const MainSideAccessList = () => {
   return (
-    <div className="main_side_accessList">
-      <div className="main_side_header_letter">
-        <div className="main_side_header_letter_left">
+    <div className="main-side-accessList">
+      <div className="main-side-header-letter">
+        <div className="main-side-header-letter-left">
           <p>스토리</p>
         </div>
         <div className="main_side_header_letter_right">
@@ -15,25 +15,25 @@ const MainSideAccessList = () => {
         </div>
       </div>
 
-      <div className="main_side_accessList_friendList">
+      <div className="main-side-accessList-friendList">
         <div className="">
           <img src={friend1} alt="친구1" />
         </div>
-        <div className="">
+        <div>
           <h1>Wecode_bootcamp </h1>
           <p> 1 시간 전</p>
         </div>
       </div>
-      <div className="main_side_accessList_friendList">
-        <div className="">
+      <div className="main-side-accessList-friendList">
+        <div>
           <img src={friend2} alt="친구1" />
         </div>
-        <div className="">
+        <div>
           <h1>Wecode_bootcamp </h1>
           <p> 1 시간 전</p>
         </div>
       </div>
-      <div className="main_side_accessList_friendList">
+      <div className="main-side-accessList-friendList">
         <div className="">
           <img src={friend3} alt="친구1" />
         </div>
@@ -42,7 +42,7 @@ const MainSideAccessList = () => {
           <p> 1 시간 전</p>
         </div>
       </div>
-      <div className="main_side_accessList_friendList">
+      <div className="main-side-accessList-friendList">
         <div className="">
           <img src={friend4} alt="친구1" />
         </div>

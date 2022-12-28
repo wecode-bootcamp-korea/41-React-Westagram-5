@@ -5,17 +5,17 @@ import friend8 from '../../assets/images/sungjae/images/friend8.png'
 
 const MainSideFollowList = () => {
   return (
-    <div className="main_side_followList">
-      <div className="main_side_header_letter">
-        <div className="main_side_header_letter_left">
+    <div className="main-side-followList">
+      <div className="main-side-header-letter">
+        <div className="main-side_header-letter-left">
           <p>스토리</p>
         </div>
-        <div className="main_side_header_letter_right">
+        <div className="main-side-header-letter-right">
           <p>모두보기</p>
         </div>
       </div>
-      <div className="main_side_header_friendList">
-        <div className="main_side_accessList_friendList">
+      <div className="main-side-header-friendList">
+        <div className="main-side-accessList-friendList">
           <div className="">
             <img src={friend5} alt="친구1" />
           </div>
@@ -30,8 +30,8 @@ const MainSideFollowList = () => {
           <h2> follow</h2>
         </div>
       </div>
-      <div className="main_side_header_friendList">
-        <div className="main_side_accessList_friendList">
+      <div className="main-side-header-friendList">
+        <div className="main-side-accessList-friendList">
           <div className="">
             <img src={friend6} alt="친구1" />
           </div>
@@ -46,8 +46,8 @@ const MainSideFollowList = () => {
           <h2> follow</h2>
         </div>
       </div>
-      <div className="main_side_header_friendList">
-        <div className="main_side_accessList_friendList">
+      <div className="main-side-header-friendList">
+        <div className="main-side-accessList-friendList">
           <div className="">
             <img src={friend7} alt="친구1" />
           </div>
@@ -62,8 +62,8 @@ const MainSideFollowList = () => {
           <h2> follow</h2>
         </div>
       </div>
-      <div className="main_side_header_friendList">
-        <div className="main_side_accessList_friendList">
+      <div className="main-side-header-friendList">
+        <div className="main-side-accessList-friendList">
           <div className="">
             <img src={friend8} alt="친구1" />
           </div>

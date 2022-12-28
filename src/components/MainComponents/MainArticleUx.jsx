@@ -35,8 +35,8 @@ const MainArticleUx = props => {
   }
 
   return (
-    <div className="main_article_ux">
-      <div className="main_article_ux_wrap">
+    <div className="main-article-ux">
+      <div>
         <input
           name="comment"
           value={comment}

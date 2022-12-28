@@ -82,31 +82,36 @@
 
 .main {
   display: flex;
-  flex-direction: row;
+  // flex-direction: row;
   justify-content: center;
   width: 1920px;
-  height: 900px;
+  height: auto;
 
   // 케밥케이스가 아니라서 뜨는 오류
-  .main_container {
+  .main-container {
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     justify-content: space-between;
     /* align-items: center; */
 
     margin-top: 50px;
     background-color: #f5f6f7;
-
-    .main_article {
+    .main-container-article-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-article {
       display: flex;
       flex-direction: column;
       align-items: center;
 
       width: 550px;
       height: 700px;
+      margin-bottom: 15px;
 
       border: 1px solid rgba(136, 136, 136, 0.4);
-      .main_article_header {
+
+      .main-article-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -126,7 +131,7 @@
           font-weight: 700;
         }
 
-        .main_article_header_left {
+        .main-article-header-left {
           display: flex;
           flex-direction: row;
 
@@ -138,14 +143,14 @@
           }
         }
       }
-      .main_article_image {
+      .main-article-image {
         width: 550px;
         height: 300px;
 
         background-size: contain;
       }
     }
-    .main_article_icon_wrap {
+    .main-article-icon-wrap {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -161,7 +166,7 @@
       #bugImg {
         margin-left: 450px;
       }
-      .main_article_icon_wrap_left {
+      .main-article-icon-wrap-left {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -171,7 +176,7 @@
         }
       }
     }
-    .main_article_comments {
+    .main-article-comments {
       width: 520px;
       height: 250px;
 
@@ -184,23 +189,23 @@
         color: rgb(90, 121, 234);
       }
 
-      .main_article_comment_1 {
+      .main-article-comment_1 {
         margin-bottom: 30px;
       }
 
-      .main_article_comment_2 li {
+      .main-article-comment_2 li {
         margin-bottom: 5px;
         font-size: 14px;
       }
 
-      .main_article_comments_wrap {
+      .main-article-comments-wrap {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
       }
     }
-    .main_article_ux {
+    .main-article-ux {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -226,13 +231,6 @@
         font-size: 8px;
       }
 
-      // .button {
-      //   border: none;
-      //   background-color: transparent;
-      //   color: rgb(74, 108, 229);
-      //   font-size: 6px;
-      // }
-
       .buttonActive {
         border: none;
         background-color: transparent;
@@ -240,7 +238,7 @@
         font-size: 8px;
       }
     }
-    .main_side {
+    .main-side {
       display: flex;
       flex-direction: column;
 
@@ -250,7 +248,7 @@
 
       background-color: #f5f6f7;
 
-      .main_side_header {
+      .main-side-header {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -267,13 +265,13 @@
           border-radius: 100px;
         }
 
-        .main_side_header_container {
+        .main-side-header-container {
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: center;
 
-          .main_side_header_container_letter {
+          .main-side-header-container-letter {
             display: flex;
             flex-direction: column;
 
@@ -289,7 +287,7 @@
         }
       }
 
-      .main_side_accessList {
+      .main-side-accessList {
         width: 300px;
         height: 250px;
         margin-bottom: 10px;
@@ -298,7 +296,7 @@
         border: 1px solid rgba(136, 136, 136, 0.4);
         background-color: #ffff;
       }
-      .main_side_accessList_friendList {
+      .main-side-accessList-friendList {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -325,7 +323,7 @@
           font-weight: 700;
         }
       }
-      .main_side_header_letter {
+      .main-side-header-letter {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -334,12 +332,12 @@
         font-size: 12px;
         font-weight: 700;
 
-        .main_side_header_letter_left {
+        .main-side-header-letter-left {
           color: gray;
         }
       }
 
-      .main_side_followList {
+      .main-side-followList {
         width: 300px;
         height: 250px;
         margin-bottom: 10px;
@@ -349,7 +347,7 @@
 
         background-color: #ffff;
 
-        .main_side_header_friendList {
+        .main-side-header-friendList {
           display: flex;
           flex-direction: row;
           align-items: center;

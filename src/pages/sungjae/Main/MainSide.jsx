@@ -4,7 +4,7 @@ import MainSideFollowList from '../../../components/MainComponents/MainSideFollo
 
 const MainSide = () => {
   return (
-    <div div className="main_side">
+    <div div className="main-side">
       <MainSideHeader />
       <MainSideAccessList />
       <MainSideFollowList />
