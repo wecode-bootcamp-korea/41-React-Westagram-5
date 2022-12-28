@@ -31,5 +31,18 @@ section {
         background-color: rgb(0, 149, 246);
       }
     }
+
+    #check {
+      display: none;
+      width: 268px;
+      margin: auto;
+      padding-bottom: 5px;
+      color: var(--font-color-gray);
+      font-size: 12px;
+
+      &.view {
+        display: block;
+      }
+    }
   }
 }
