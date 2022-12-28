@@ -10,6 +10,7 @@ import share from '../../../assets/images/galim/share.png';
 import wecodeLogo from '../../../assets/images/galim/wecode-logo.jpeg';
 import Comment from '../../../components/galim/Comment';
 import Nav from '../../../components/Nav/Nav';
+import { ASIDE_ETC_TEXT } from '../../../components/galim/aside';
 
 const MainGalim = () => {
   const [commentValue, setCommentValue] = useState('');
@@ -192,14 +193,9 @@ const MainGalim = () => {
           </div>
 
           <div className="main-aside-etc">
-            <p>
-              Instagram 정보﹒지원﹒홍보 센터﹒API﹒
-              <br />
-              채용 정보﹒개인정보처리방침약관
-              <br />
-              디렉터리﹒프로필﹒해시태그﹒언어
-              <br />
-            </p>
+            {ASIDE_ETC_TEXT.map(etc => (
+              <span key={etc.id}>{etc.text}</span>
+            ))}
             <p>© 2022 INSTAGRAM</p>
           </div>
         </aside>
