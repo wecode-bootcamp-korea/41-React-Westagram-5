@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../SignUp/SignUpForm.scss';
 
-function LoginForm() {
+function SignForm() {
   let [email, setEmail] = useState('');
   let [password, setPassword] = useState('');
 
@@ -18,16 +19,30 @@ function LoginForm() {
   };
 
   //조건이 맞는지 확인하기 (isabled로 버튼에 넣어주기)
-  const active = email.includes('@') && password.length > 5;
+  const active = email.length && password.length > 6;
 
   //disabled 조건 생성하기 (클래스네임 변경 변수 버튼에 넣어주기)
   const name = active ? 'active' : '';
 
   //메인페이지로 이동
-  const goToMain = () => {
+  const goToLogin = () => {
     active
-      ? navigate('/main-jinkyung')
+      ? navigate('/login-jinkyung')
       : alert('아이디 또는 비밀번호를 확인하세요');
+  };
+
+  const signUp = e => {
+    e.preventDefault();
+    fetch('https://westagram-signup.herokuapp.com/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        id: email,
+        pw: password,
+      }),
+    }).then(res => console.log(res));
   };
 
   return (
@@ -52,13 +67,14 @@ function LoginForm() {
           id="login_btn"
           className={name}
           isabled={active}
-          onClick={goToMain}
+          // onClick={goToLogin}
+          onClick={signUp}
         >
-          로그인
+          회원가입하기
         </button>
       </form>
     </section>
   );
 }
 
-export default LoginForm;
+export default SignForm;
