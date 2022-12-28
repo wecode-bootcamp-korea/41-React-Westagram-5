@@ -1,4 +1,3 @@
-// import faecbookImg from "../../Assets/images/facebook.png";
 import { useRef, useState } from 'react'
 import faecbookImg from '../../assets/images/sungjae/images/facebook.png'
 

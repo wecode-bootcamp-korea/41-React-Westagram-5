@@ -1,6 +1,7 @@
 //Import tools
 import { useRef, useState } from 'react'
-
+//Import Component
+import MainArticleUx from '../../../components/MainComponents/MainArticleUx'
 //Import Img
 import articleImg from '../../../assets/images/sungjae/images/christmas.jpg'
 import redHeartImg from '../../../assets/images/sungjae/images/redheart.png'
@@ -9,8 +10,6 @@ import exportImg from '../../../assets/images/sungjae/images/export.png'
 import saveImg from '../../../assets/images/sungjae/images/save.png'
 import MainArticleHeader from '../../../components/MainComponents/MainArticleHeader'
 import MainArticleComment from '../../../components/MainComponents/MainArticleComment'
-
-import MainArticleUx from '../../../components/MainComponents/MainArticleUx'
 
 const MainArticle = () => {
   const [data, setData] = useState([])

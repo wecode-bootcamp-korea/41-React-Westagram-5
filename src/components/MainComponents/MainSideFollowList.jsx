@@ -1,9 +1,3 @@
-//Import Img
-// import friend5 from "../../Assets/images/friend5.png";
-// import friend6 from "../../Assets/images/friend6.png";
-// import friend7 from "../../Assets/images/friend7.png";
-// import friend8 from "../../Assets/images/friend8.png";
-
 import friend5 from '../../assets/images/sungjae/images/friend5.png'
 import friend6 from '../../assets/images/sungjae/images/friend6.png'
 import friend7 from '../../assets/images/sungjae/images/friend7.png'
@@ -11,7 +5,6 @@ import friend8 from '../../assets/images/sungjae/images/friend8.png'
 
 const MainSideFollowList = () => {
   return (
-    // Map Method 돌리면 좋다
     <div className="main_side_followList">
       <div className="main_side_header_letter">
         <div className="main_side_header_letter_left">

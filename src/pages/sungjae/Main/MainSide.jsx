@@ -1,7 +1,3 @@
-// import MainSideHeader from '../../Components/MainComponents/MainSideHeader';
-// import MainSideAccessList from '../../Components/MainComponents/MainSideAccessList';
-// import MainSideFollowList from '../../Components/MainComponents/MainSideFollowList';
-
 import MainSideHeader from '../../../components/MainComponents/MainSideHeader'
 import MainSideAccessList from '../../../components/MainComponents/MainSideAccessList'
 import MainSideFollowList from '../../../components/MainComponents/MainSideFollowList'

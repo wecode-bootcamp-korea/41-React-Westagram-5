@@ -1,7 +1,4 @@
-//Import Img
-// import jakeprofileImg from '../../Assets/images/jakeprf.png';
-
-import jakeprofileImg from '../../assets/images/sungjae/images/jakeprf.png';
+import jakeprofileImg from '../../assets/images/sungjae/images/jakeprf.png'
 
 const MainSideHeader = () => {
   return (
@@ -14,7 +11,7 @@ const MainSideHeader = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainSideHeader;
+export default MainSideHeader

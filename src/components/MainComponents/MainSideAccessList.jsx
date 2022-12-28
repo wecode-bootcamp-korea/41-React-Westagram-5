@@ -1,9 +1,3 @@
-//Import Img
-// import friend1 from "../../Assets/images/friend1.png";
-// import friend2 from "../../Assets/images/friend2.png";
-// import friend3 from "../../Assets/images/friend3.png";
-// import friend4 from "../../Assets/images/friend4.png";
-
 import friend1 from '../../assets/images/sungjae/images/friend1.png'
 import friend2 from '../../assets/images/sungjae/images/friend2.png'
 import friend3 from '../../assets/images/sungjae/images/friend3.png'
@@ -11,7 +5,6 @@ import friend4 from '../../assets/images/sungjae/images/friend4.png'
 
 const MainSideAccessList = () => {
   return (
-    // Map method 쓰면 좋을 것 같음
     <div className="main_side_accessList">
       <div className="main_side_header_letter">
         <div className="main_side_header_letter_left">
@@ -21,6 +14,7 @@ const MainSideAccessList = () => {
           <p>모두보기</p>
         </div>
       </div>
+
       <div className="main_side_accessList_friendList">
         <div className="">
           <img src={friend1} alt="친구1" />
@@ -62,3 +56,5 @@ const MainSideAccessList = () => {
 }
 
 export default MainSideAccessList
+
+const ARRAY = [1, 2, 3, 4]

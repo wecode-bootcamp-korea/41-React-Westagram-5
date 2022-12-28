@@ -1,14 +1,11 @@
 // Import React
-import React from 'react';
-
+import React from 'react'
 // Component 가져오기
-import LoginMain from './LoginMain';
-
-// css 가져오기
-import './Login.scss';
-
+import LoginMain from './LoginMain'
 // Img file 저장
-import instaCellphone from '../../../assets/images/sungjae/images/instacellphone.png';
+import instaCellphone from '../../../assets/images/sungjae/images/instacellphone.png'
+// css 가져오기
+import './Login.scss'
 
 const LoginSungjae = () => {
   return (
@@ -18,7 +15,7 @@ const LoginSungjae = () => {
         <LoginMain />
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default LoginSungjae;
+export default LoginSungjae

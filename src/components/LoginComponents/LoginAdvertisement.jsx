@@ -1,9 +1,5 @@
-//Img
-// import advertisement1 from '../../Assets/images/adver1.png';
-// import advertisement2 from '../../Assets/images/adver2.png';
-
-import advertisement1 from '../../assets/images/sungjae/images/adver1.png';
-import advertisement2 from '../../assets/images/sungjae/images/adver2.png';
+import advertisement1 from '../../assets/images/sungjae/images/adver1.png'
+import advertisement2 from '../../assets/images/sungjae/images/adver2.png'
 
 const LoginAdvertisemnet = () => {
   return (
@@ -14,7 +10,7 @@ const LoginAdvertisemnet = () => {
         <img src={advertisement2} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LoginAdvertisemnet;
+export default LoginAdvertisemnet

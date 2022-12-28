@@ -1,19 +1,10 @@
-// Import Link, useNavigate
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-// Import Img
-// import instagramLogo from '../../Assets/images/instagramlogo.png';
-// import instagramLogo2 from '../../Assets/images/instagram2.png';
-// import exploreImg from '../../Assets/images/explore.png';
-// import heartImg from '../../Assets/images/heart.png';
-// import profileImg from '../../Assets/images/profile.png';
-
-//
-import instagramLogo from '../../../assets/images/sungjae/images/instagramlogo.png';
-import instagramLogo2 from '../../../assets/images/sungjae/images/instagram2.png';
-import exploreImg from '../../../assets/images/sungjae/images/explore.png';
-import heartImg from '../../../assets/images/sungjae/images/heart.png';
-import profileImg from '../../../assets/images/sungjae/images/profile.png';
+import instagramLogo from '../../../assets/images/sungjae/images/instagramlogo.png'
+import instagramLogo2 from '../../../assets/images/sungjae/images/instagram2.png'
+import exploreImg from '../../../assets/images/sungjae/images/explore.png'
+import heartImg from '../../../assets/images/sungjae/images/heart.png'
+import profileImg from '../../../assets/images/sungjae/images/profile.png'
 
 const MainHeader = () => {
   return (
@@ -34,7 +25,7 @@ const MainHeader = () => {
         <img src={profileImg} alt="logo" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainHeader;
+export default MainHeader

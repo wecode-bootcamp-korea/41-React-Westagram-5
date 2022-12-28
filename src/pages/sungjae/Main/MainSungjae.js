@@ -1,21 +1,12 @@
-import React from 'react';
-import './Main.scss';
+import React from 'react'
 
-// Import useNavigate
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import MainHeader from './MainHeader'
+import MainArticle from './MainArticle'
+import MainSide from './MainSide'
 
-//Import Component
-import MainHeader from './MainHeader';
-import MainArticle from './MainArticle';
-import MainSide from './MainSide';
+import './Main.scss'
 
 const MainSungjae = () => {
-  const navigate = useNavigate();
-  const goToLogin = () => {
-    navigate('/main-sungjae');
-  };
-  //
   return (
     <React.Fragment>
       <MainHeader />
@@ -26,7 +17,7 @@ const MainSungjae = () => {
         </div>
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default MainSungjae;
+export default MainSungjae
