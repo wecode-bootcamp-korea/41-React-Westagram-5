@@ -33,7 +33,6 @@ const MainArticle = () => {
     <div className="main_article">
       <MainArticleHeader />
 
-      {/* Component 나누기 애매한 부분 */}
       <div
         className="main_article_image"
         style={{ backgroundImage: `url(${articleImg})` }}
