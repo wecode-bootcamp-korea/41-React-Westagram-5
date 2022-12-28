@@ -19,15 +19,15 @@ function SignForm() {
   };
 
   //조건이 맞는지 확인하기 (isabled로 버튼에 넣어주기)
-  const active = email.length && password.length > 6;
+  const active = email.length && password.length >= 6;
 
   const emailCheck = email.length < 6;
   const passwordCheck = password.length < 6;
 
   //disabled 조건 생성하기 (클래스네임 변경 변수 버튼에 넣어주기)
   const name = active ? 'active' : '';
-  const emailName = emailCheck ? 'view' : '';
-  const passwordName = passwordCheck ? 'view' : '';
+  const emailName = emailCheck ? ' view' : '';
+  const passwordName = passwordCheck ? ' view' : '';
 
   //메인페이지로 이동
   const goToLogin = () => {
@@ -61,7 +61,7 @@ function SignForm() {
           //값이 바뀌는거 (=조건이 성립하는지) 확인하기 위해 onChange사용
           value={email}
         />
-        <div id="check" className={emailName}>
+        <div className={'check' + emailName}>
           아이디를 6글자 이상 입력해주세요
         </div>
         <input
@@ -71,7 +71,7 @@ function SignForm() {
           onChange={passWordInputValue}
           value={password}
         />
-        <div id="check" className={passwordName}>
+        <div className={'check' + passwordName}>
           비밀번호를 6글자 이상 입력해주세요
         </div>
 
