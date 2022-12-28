@@ -29,6 +29,11 @@ body {
   font-weight: bold;
 }
 
+.user-id-color,
+.comment-user {
+  margin-right: 5px;
+}
+
 .color-grey {
   color: grey;
   font-size: 16px;
@@ -328,10 +333,14 @@ body {
       }
     }
 
-    .main-aside-etc p {
-      margin-top: 15px;
+    .main-aside-etc {
+      margin-top: 10px;
+    }
+    .main-aside-etc p,
+    span {
+      margin-top: 5px;
       color: #ccc;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }
