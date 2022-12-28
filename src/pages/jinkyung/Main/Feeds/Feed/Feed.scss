@@ -1,4 +1,4 @@
-@import '../../../../../../styles/variables';
+@import '../../../../../styles/variables';
 
 /* -----article----- */
 #article {
@@ -33,7 +33,7 @@
       width: 20px;
       height: 20px;
       margin: 15px 5px 0 0;
-      background-image: url('../../../../../../assets/images/jinkyung/Main/ellipsis.png');
+      background-image: url('../../../../../assets/images/jinkyung/Main/ellipsis.png');
       background-size: cover;
       cursor: pointer;
     }
@@ -61,22 +61,22 @@
 
       /* stylelint-disable-next-line selector-class-pattern */
       .icon_1 {
-        background-image: url('../../../../../../assets/images/jinkyung/Main/heart.png');
+        background-image: url('../../../../../assets/images/jinkyung/Main/heart.png');
         cursor: pointer;
 
         &.active {
-          background-image: url('../../../../../../assets/images/jinkyung/Main/heart.png');
+          background-image: url('../../../../../assets/images/jinkyung/Main/heart.png');
         }
       }
 
       /* stylelint-disable-next-line selector-class-pattern */
       .icon_2 {
-        background-image: url('../../../../../../assets/images/jinkyung/Main/chat-balloon.png');
+        background-image: url('../../../../../assets/images/jinkyung/Main/chat-balloon.png');
       }
 
       /* stylelint-disable-next-line selector-class-pattern */
       .icon_3 {
-        background-image: url('../../../../../../assets/images/jinkyung/Main/upload.png');
+        background-image: url('../../../../../assets/images/jinkyung/Main/upload.png');
       }
     }
 
@@ -87,7 +87,7 @@
 
       .bookmark {
         @include icon;
-        background-image: url('../../../../../../assets/images/jinkyung/Main/ribbon.png');
+        background-image: url('../../../../../assets/images/jinkyung/Main/ribbon.png');
       }
     }
   }

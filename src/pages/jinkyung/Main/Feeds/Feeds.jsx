@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ReactCount from './ReactCount/ReactCount';
-import Comment from './Comment/Comment';
 import '../Feeds/Feeds.scss';
-import Feed from './ReactCount/Feed/Feed';
+import Feed from './Feed/Feed';
 
 function Feeds() {
   //데이터 받아오기

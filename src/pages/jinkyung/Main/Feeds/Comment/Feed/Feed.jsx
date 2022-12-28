@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../Feed/Feed.scss';
+import './Feed.scss';
 import ReactCount from '../ReactCount';
-import Comment from '../../Comment/Comment';
+import Comment from '../Comment/Comment';
 
 function Feed({ info, count, setCount }) {
   let [heart, setHeart] = useState(false);
