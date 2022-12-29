@@ -1,0 +1,99 @@
+/* stylelint-disable max-nesting-depth */
+/* stylelint-disable selector-class-pattern */
+.nav-center {
+  position: relative;
+  width: 300px;
+  margin: 0 10px;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    border: #dbdbdb 1px solid;
+    border-radius: 5px;
+    outline: none;
+    color: #9d9d9d;
+    text-align: center;
+  }
+  .idBox {
+    position: absolute;
+    // display: none;
+    z-index: 100;
+    bottom: -300px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background: #fff;
+
+    .id-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+        padding-top: 5px;
+      }
+
+      .search {
+        box-sizing: border-box;
+        margin: 0;
+        padding-left: 10px;
+        font-size: 0.8rem;
+      }
+
+      .delete {
+        padding-right: 10px;
+        color: rgb(7, 96, 230);
+        font-size: 0.6rem;
+        cursor: pointer;
+      }
+    }
+
+    .idprofile {
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+
+        padding-bottom: 7px;
+        border-bottom: 1px solid #9d9d9d;
+
+        .idcircle {
+          width: 30px;
+          height: 30px;
+          margin: 3px 5px 10px 20px;
+          border-radius: 100%;
+          background-color: #000;
+        }
+        .idNames {
+          display: flex;
+          flex-flow: column;
+
+          .idName {
+            font-weight: bold;
+          }
+
+          .idNickName {
+            color: #9d9d9d;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .fa-xmark {
+      padding-right: 10px;
+    }
+  }
+  .idBox::-webkit-scrollbar {
+    display: none;
+  }
+}

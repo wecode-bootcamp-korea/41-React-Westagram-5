@@ -1,0 +1,281 @@
+/* stylelint-disable max-nesting-depth */
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.user-id-color {
+  font-weight: bold;
+}
+
+.user-id {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-id-color,
+.comment-user {
+  margin-right: 5px;
+}
+
+.color-grey {
+  color: grey;
+  font-size: 16px;
+}
+
+.comment-user {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.main-userpost-img {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.main-userpost-id {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.main-user-posting {
+  width: 700px;
+  height: 100%;
+  margin: 0;
+}
+
+.main-wrap {
+  @include flexBetween;
+}
+
+/* main style 속성 정의 */
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.main-wrap {
+  flex-direction: column;
+  width: 1200px;
+  @include flexCenter;
+
+  /* main content*/
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1100px;
+
+    section {
+      width: 700px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      /* section - 위스타그램 프로필네비 */
+      .main-userpost-idwrap {
+        @include flexBetween;
+
+        .main-user-option {
+          margin: 15px;
+        }
+      }
+
+      /* article */
+
+      .main-user-commentwrap {
+        margin: 10px;
+
+        .main-userpost-logo {
+          @include flexBetween;
+
+          .post-icon img {
+            width: 35px;
+            margin: 6px;
+          }
+
+          .bookmark-wrap img {
+            flex-basis: 20%;
+            width: 35px;
+            margin: 6px;
+          }
+        }
+
+        .main-user-content {
+          margin-bottom: 10px;
+        }
+      }
+
+      .main-userpost-comment {
+        @include flexBetween;
+        height: 40px;
+
+        input {
+          width: 100%;
+          padding-left: 10px;
+          border: none;
+          font-size: 15px;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
+        #comment-btn {
+          width: 50px;
+          height: 100%;
+          padding: 10px 0;
+          border: none;
+          background-color: none;
+          color: skyblue;
+          font-size: 15px;
+        }
+
+        #comment-btn:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  /* aside */
+  aside {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+
+    .main-aside-user {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .main-aside-userid {
+        margin: 15px;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        p {
+          color: grey;
+        }
+      }
+    }
+
+    .main-aside-story {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      .main-aside-storytitle {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+      }
+
+      ul {
+        padding: 0;
+
+        .main-aside-storyitem {
+          display: flex;
+          margin: 15px;
+          list-style: none;
+
+          img {
+            width: 42px;
+            height: 42px;
+            margin-right: 15px;
+            padding: 1px;
+            border: 0.5px solid transparent;
+            border-radius: 50%;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(#fff, #fff),
+              linear-gradient(to right, red 0%, orange 100%);
+            background-origin: border-box;
+          }
+        }
+      }
+    }
+
+    /* story-recommend*/
+    .main-aside-recommend {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      .main-aside-recommendtitle {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+      }
+
+      ul {
+        padding: 0;
+
+        .main-aside-recommenditem {
+          display: flex;
+          align-items: center;
+          margin: 10px;
+          list-style: none;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: 15px;
+          border-radius: 50%;
+
+          .main-aside-recommendid p:first-child {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          .main-aside-recommenditemfollow {
+            margin-left: 40px;
+            color: skyblue;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .main-aside-etc {
+      margin-top: 10px;
+    }
+    .main-aside-etc p,
+    span {
+      margin-top: 5px;
+      color: #ccc;
+      font-size: 16px;
+    }
+  }
+}
