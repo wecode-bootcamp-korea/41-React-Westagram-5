@@ -1,0 +1,145 @@
+@import '../../../styles/variables';
+
+/* -----nav----- */
+nav {
+  height: 70px;
+  border-bottom: 1px solid rgb(198, 198, 198);
+  @include background-color-white;
+
+  #nav_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+
+    #logo_wrap,
+    #search,
+    #info_wrap {
+      display: flex;
+      padding: 20px;
+    }
+
+    #logo_wrap {
+      /* stylelint-disable-next-line selector-class-pattern */
+      .logo_1 {
+        width: 30px;
+        height: 30px;
+        background-image: url(../../../../src/assets/images/jinkyung/Main/logo.png);
+        background-size: cover;
+      }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      .logo_2 {
+        width: 100px;
+        height: 30px;
+        font-family: 'Lobster', cursive;
+        font-size: 25px;
+      }
+    }
+
+    #search {
+      position: relative;
+
+      & > input {
+        @include border;
+        @include border-radius;
+        @include background-color-main;
+        width: 200px;
+        text-align: center;
+      }
+    }
+
+    #info_wrap {
+      & > div {
+        width: 25px;
+        height: 25px;
+        margin-right: 25px;
+        background-size: cover;
+
+        /* stylelint-disable-next-line max-nesting-depth */
+        & > div:last-child {
+          margin-right: 0px;
+        }
+      }
+      /* stylelint-disable-next-line selector-class-pattern */
+      .icon_1 {
+        background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png);
+      }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      .icon_2 {
+        background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png);
+      }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      .icon_3 {
+        background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png);
+      }
+    }
+  }
+}
+
+/* -----nav search dropbox----- */
+#drop_box_wrap {
+  @include border;
+  @include background-color-white;
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+  left: -3px;
+  width: 250px;
+  padding: 15px 5px;
+
+  &:hover {
+    @include background-color-main;
+  }
+
+  &.none_view {
+    display: none;
+  }
+}
+
+/* -----nav user dropbox----- */
+#user_info_drop_box {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  right: 15%;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &.none_view {
+    display: none;
+  }
+
+  & > li {
+    display: flex;
+    height: 50px;
+    font-size: 15px;
+
+    & > img {
+      padding: 15px;
+      border-radius: 50%;
+    }
+
+    & > div {
+      padding: 18px 0px;
+    }
+  }
+
+  & > li:last-child {
+    padding: 18px;
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+/* -----main----- */
+main {
+  @include background-color-main;
+  display: flex;
+  justify-self: end;
+  height: 100vw;
+}

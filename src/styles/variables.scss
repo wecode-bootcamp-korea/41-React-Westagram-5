@@ -1,3 +1,24 @@
-@mixin name {
-  color: red;
+@mixin border {
+  border: 1px solid rgb(198, 198, 198);
+}
+@mixin storyBorder {
+  border: 2px solid rgb(220, 57, 109);
+}
+@mixin background-color-white {
+  background-color: #fff;
+}
+
+@mixin background-color-main {
+  background-color: rgb(250, 250, 250);
+}
+
+@mixin border-radius {
+  border-radius: 3px;
+}
+
+@mixin icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-size: cover;
 }

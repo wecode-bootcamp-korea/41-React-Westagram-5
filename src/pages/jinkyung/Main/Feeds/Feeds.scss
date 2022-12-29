@@ -1,0 +1,11 @@
+@import '../../../../styles/Variables';
+
+/* -----feeds----- */
+#feeds {
+  position: absolute;
+  left: 17%;
+  width: 45%;
+  height: 700px;
+  padding: 40px 10px 0px;
+  overflow: scroll;
+}

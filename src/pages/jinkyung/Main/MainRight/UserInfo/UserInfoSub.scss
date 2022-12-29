@@ -1,0 +1,32 @@
+@import '../../../../../styles/variables';
+
+/* -----user info----- */
+#user_info_wrap {
+  position: relative;
+  padding: 0 5px;
+
+  & > li {
+    display: flex;
+  }
+
+  #user_img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-size: cover;
+
+    &.story {
+      @include storyBorder;
+      padding: 2px;
+    }
+  }
+
+  #user_name_wrap {
+    padding-top: 2px;
+
+    .name_sub {
+      color: var(--font-color-gray);
+    }
+  }
+}
