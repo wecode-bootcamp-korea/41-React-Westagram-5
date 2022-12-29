@@ -39,15 +39,18 @@ function SignForm() {
   const signUp = e => {
     e.preventDefault();
     fetch('https://westagram-signup.herokuapp.com/signup', {
-      method: 'POST',
+      //서버 주소 입력
+      method: 'POST', //GET은 기본사항
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
+        'Content-Type': 'application/json;charset=utf-8', //POST면 필수적으로 넣어줘야 함
       },
+      //JSON 파일로 변경
       body: JSON.stringify({
         id: email,
         pw: password,
       }),
     }).then(res => console.log(res));
+    // .then(data => console.log(data));
   };
 
   return (
