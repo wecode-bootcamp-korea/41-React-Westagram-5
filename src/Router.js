@@ -22,9 +22,9 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/signUp-jinkyung" element={<SignUp />} />
         <Route path="/login-jinkyung" element={<LoginJinkyung />} />
         <Route path="/main-jinkyung" element={<MainJinkyung />} />
-        <Route path="/signUp-jinkyung" element={<SignUp />} />
 
         <Route path="/login-nahyun" element={<LoginNahyun />} />
         <Route path="/main-nahyun" element={<MainNahyun />} />

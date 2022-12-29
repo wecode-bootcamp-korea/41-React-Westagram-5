@@ -29,16 +29,9 @@ function SignForm() {
   const emailName = emailCheck ? ' view' : '';
   const passwordName = passwordCheck ? ' view' : '';
 
-  //메인페이지로 이동
-  const goToLogin = () => {
-    active
-      ? navigate('/login-jinkyung')
-      : alert('아이디 또는 비밀번호를 확인하세요');
-  };
-
   const signUp = e => {
     e.preventDefault();
-    fetch('https://westagram-signup.herokuapp.com/signup', {
+    fetch('http://10.58.52.203:3000/auth/signup', {
       //서버 주소 입력
       method: 'POST', //GET은 기본사항
       headers: {
@@ -46,11 +39,21 @@ function SignForm() {
       },
       //JSON 파일로 변경
       body: JSON.stringify({
-        id: email,
-        pw: password,
+        // id: email,
+        // pw: password,
+        email: email,
+        password: password,
       }),
-    }).then(res => console.log(res));
+    })
+      .then(response => response.json())
+      .then(signUp => console.log(signUp));
     // .then(data => console.log(data));
+
+    // 메인페이지로 이동
+
+    active
+      ? navigate('/login-jinkyung')
+      : alert('아이디 또는 비밀번호를 확인하세요');
   };
 
   return (
