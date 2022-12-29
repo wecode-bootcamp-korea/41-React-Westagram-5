@@ -45,83 +45,40 @@ body {
   font-weight: bold;
 }
 
+.main-userpost-img {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.main-userpost-id {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.main-user-posting {
+  width: 700px;
+  height: 100%;
+  margin: 0;
+}
+
+.main-wrap {
+  @include flexBetween;
+}
+
 /* main style 속성 정의 */
+
+/* stylelint-disable-next-line no-duplicate-selectors */
 .main-wrap {
   flex-direction: column;
   width: 1200px;
   @include flexCenter;
-
-  /* nav */
-  nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-
-    .main-logo {
-      @include flexCenter;
-      flex-basis: 30%;
-      color: #000;
-      font-style: none;
-      text-decoration: none;
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
-
-      span {
-        width: 10px;
-        margin: 20px;
-        font-size: 50px;
-        font-weight: 300;
-      }
-
-      h1 {
-        // font-family: 'Lobster-Regular';
-        font-size: 30px;
-      }
-    }
-
-    .search {
-      @include flexCenter;
-      flex-basis: 40%;
-
-      input {
-        width: 280px;
-        height: 40px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 18px;
-        text-align: center;
-        // background-image: url("../../assets/Main/heart.png");
-
-        &::placeholder {
-          // background-image: url('../../assets/Main/icons8-search-50.png');
-          background-repeat: no-repeat;
-          background-position: 5px center;
-          background-size: 17px;
-        }
-      }
-
-      input:focus {
-        outline: none;
-      }
-    }
-
-    .main-userdata {
-      display: flex;
-      flex-basis: 30%;
-      align-items: center;
-      justify-content: flex-end;
-
-      img {
-        width: 40px;
-        height: 40px;
-        margin: 0 13px;
-      }
-    }
-  }
 
   /* main content*/
   .main-content {
@@ -139,34 +96,12 @@ body {
       .main-userpost-idwrap {
         @include flexBetween;
 
-        .main-userpost-id {
-          display: flex;
-          align-items: center;
-
-          img {
-            width: 40px;
-            height: 40px;
-            margin: 15px;
-            border-radius: 50%;
-          }
-
-          p {
-            font-size: 18px;
-            font-weight: bold;
-          }
-        }
-
         .main-user-option {
           margin: 15px;
         }
       }
 
       /* article */
-      .main-user-posting {
-        width: 100%;
-        height: 750px;
-        margin: 0;
-      }
 
       .main-user-commentwrap {
         margin: 10px;

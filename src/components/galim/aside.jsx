@@ -9,8 +9,8 @@ export const ASIDE_ETC_TEXT = [
   { id: 6, text: '개인정보처리방침약관﹒' },
   { id: 7, text: '디렉터리﹒' },
   { id: 8, text: '프로필﹒' },
-  { id: 2, text: '해시태그﹒' },
-  { id: 3, text: '언어' },
+  { id: 9, text: '해시태그﹒' },
+  { id: 10, text: '언어' },
   // { id: 4, text: '© 2022 INSTAGRAM' },
 ];
 

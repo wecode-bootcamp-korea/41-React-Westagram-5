@@ -15,8 +15,26 @@ export default function LoginGalim() {
     setPwValue(event.target.value);
   };
 
-  const handleToMain = () => {
-    navigate('/main-galim');
+  const handleToMain = e => {
+    e.preventDefault();
+    fetch('http://10.58.52.180:3000/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        window.localStorage.setItem('token', data.accessToken);
+        alert('로그인 성공');
+
+        // .then(data => console.log(data));
+        navigate('/main-galim');
+      });
   };
 
   const isActive = idValue.includes('@') && pwValue.length >= 5;
@@ -49,7 +67,9 @@ export default function LoginGalim() {
               id="login-btn"
               onClick={handleToMain}
               type="submit"
-              style={{ backgroundColor: `${isActive ? '#0179f2' : '#b2dffc'}` }}
+              style={{
+                backgroundColor: `${isActive ? '#0179f2' : '#b2dffc'}`,
+              }}
               disabled={!isActive}
             >
               로그인

@@ -6,19 +6,19 @@ export default function Nav() {
   return (
     <nav>
       <div className="nav-left">
-        <i className="fa-brands fa-instagram"></i>
-        <p className="nav-left-bar"></p>
+        <i className="fa-brands fa-instagram" />
+        <p className="nav-left-bar" />
         <p>
-          <Link to="/login" className="instagram">
+          <Link to="/login" style={{ fontSize: '20px' }} className="instagram">
             Instagram
           </Link>
         </p>
       </div>
       <Find className="nav-center" />
       <div className="nav-right">
-        <i className="fa-solid fa-magnifying-glass"></i>
-        <i className="fa-regular fa-heart"></i>
-        <i className="fa-regular fa-user"></i>
+        <i className="fa-solid fa-magnifying-glass" />
+        <i className="fa-regular fa-heart" />
+        <i className="fa-regular fa-user" />
       </div>
     </nav>
   );

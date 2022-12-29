@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "profileImg": "/images/galim/profile-img.jpg",
+    "postImg": "/images/galim/feed-cass.jpg",
+    "text": "위코드엔 귀여운 카스냉장고가 있다 :-)"
+  },
+  {
+    "id": 2,
+    "profileImg": "/images/galim/profile-img.jpg",
+    "postImg": "/images/galim/feed-genga.jpg",
+    "text": "역시 공부빼고 다 재밌어!"
+  },
+  {
+    "id": 3,
+    "profileImg": "/images/galim/profile-img.jpg",
+    "postImg": "/images/galim/feed-tree.jpg",
+    "text": "Merry Christmas🎄❤️"
+  }
+]
