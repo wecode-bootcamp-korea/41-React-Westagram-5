@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import faecbookImg from '../../assets/images/sungjae/images/facebook.png'
 
 const LoginForm = () => {
@@ -7,7 +7,51 @@ const LoginForm = () => {
     identify: '',
     password: '',
   })
+  const [token, setToken] = useState('')
+  // 로그인 fetch 메서드
 
+  const signUpHandler = () => {
+    fetch('http://10.58.52.176:3000/signUp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: state.identify,
+        password: state.password,
+        name: '',
+      }),
+    }) //요청
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      })
+    //응답
+  }
+
+  const loginHandler = () => {
+    fetch('http://10.58.52.176:3000/signIn', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: state.identify,
+        password: state.password,
+        name: '',
+      }),
+    }) //요청
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        localStorage.setItem('Token', data.accessToken)
+        sessionStorage.setItem('Token', data.accessToken)
+        console.log(localStorage.getItem('Token'))
+        console.log(sessionStorage.getItem('Token'))
+      })
+    //응답
+  }
+  console.log(state.identify)
   const changeStateHandler = e => {
     setState({
       ...state,
@@ -74,9 +118,20 @@ const LoginForm = () => {
         disabled={isInputValue ? false : false}
         onClick={() => {
           submitHandler()
+          signUpHandler()
         }}
       >
-        Log in
+        SignUP
+      </button>
+      <button
+        className={isActive ? 'buttonActive' : 'button'}
+        disabled={isInputValue ? false : false}
+        onClick={() => {
+          submitHandler()
+          loginHandler()
+        }}
+      >
+        Log in2
       </button>
 
       <div className="lineWrap">
