@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "liker": "PostMalone",
+    "image": {
+      "mainImage": "../src/assets/images/sungjae/images/post1.png",
+      "subImage": {
+        "heart": "",
+        "chat": "",
+        "export": "",
+        "save": ""
+      }
+    },
+    "feedCommnet": "위워크에서 뭐할까 ",
+    "comment": [
+      {
+        "id": 1,
+        "writer": "Unknown01",
+        "comment": "크리스마스날 뭐하실거에요..?"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "liker": "PostMalone",
+    "image": {
+      "mainImage": "../src/assets/images/sungjae/images/post1.png",
+      "subImage": {
+        "heart": "",
+        "chat": "",
+        "export": "",
+        "save": ""
+      }
+    },
+    "feedCommnet": "위워크에서 뭐할까 ",
+    "comment": [
+      {
+        "id": 2,
+        "writer": "Unknown02",
+        "comment": "와인파티하러가요?"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "liker": "PostMalone",
+    "image": {
+      "mainImage": "../src/assets/images/sungjae/images/post1.png",
+      "subImage": {
+        "heart": "",
+        "chat": "",
+        "export": "",
+        "save": ""
+      }
+    },
+    "feedCommnet": "위워크에서 뭐할까 ",
+    "comment": [
+      {
+        "id": 3,
+        "writer": "Unknown03",
+        "comment": "ㅠㅠ나홀로크리스마스"
+      }
+    ]
+  }
+]
